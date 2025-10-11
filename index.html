@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>MRC 체크리스트 엑셀 무료 다운로드</title>
+  <meta name="description" content="4대법인 포맷 기반 MRC 운영평가 체크리스트 엑셀 무료 제공. 내부회계 실무자가 바로 쓸 수 있는 구조"/>
+  <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="/download">어태수 회계사</a>
+    <nav class="nav">
+      <a href="/mrc">운영평가 소개</a>
+      <a href="/quote">견적 요청</a>
+    </nav>
+  </header>
+
+  <main class="container hero">
+    <div class="grid grid-2">
+      <section>
+        <h1 class="h1">MRC 운영평가 어디서부터 시작해야 할지 막막하신가요?</h1>
+        <p class="p">무료 엑셀 템플릿으로 지금 바로 시작하세요. 4대법인 포맷 기반 구조로 구성되어 감사인 대응에 유리합니다.</p>
+        <div style="margin:12px 0 18px">
+          <span class="tag">MRC 체크리스트</span>
+          <span class="tag">감사인 포인트</span>
+          <span class="tag">셀프 어세스먼트</span>
+        </div>
+
+        <form id="dlForm" class="card form" aria-describedby="dlHelp">
+          <div class="row">
+            <input class="input" type="text" name="name" placeholder="이름" required/>
+            <input class="input" type="email" name="email" placeholder="이메일" required/>
+          </div>
+          <input class="input" type="text" name="company" placeholder="회사명(선택)"/>
+          <button class="button" type="submit">엑셀 템플릿 다운로드</button>
+          <p id="dlHelp" class="help">입력하신 이메일로 템플릿 링크도 함께 보내드립니다.</p>
+        </form>
+
+        <p class="notice">다운로드 후 운영평가 소개 페이지에서 실제 사례를 확인하실 수 있습니다.</p>
+      </section>
+
+      <aside>
+        <div class="card">
+          <h2 class="h2">템플릿 구성</h2>
+          <ul class="list">
+            <li>MRC 평가목록</li>
+            <li>Self Assessment</li>
+            <li>감사인 피드백 대비표</li>
+            <li>활용 가이드</li>
+          </ul>
+          <hr/>
+          <div class="kpi">
+            <div class="card"><div class="value">60%↓</div><div>지적 감소</div></div>
+            <div class="card"><div class="value">5일</div><div>평균 납품</div></div>
+            <div class="card"><div class="value">70%</div><div>비용 절감</div></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer container">
+    © 어태수 회계사 · 개인정보는 템플릿 발송과 상담 안내에만 사용됩니다.
+  </footer>
+
+  <script>
+    // 간단한 다운로드 + 리디렉션
+    const f = document.getElementById('dlForm');
+    f.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const a = document.createElement('a');
+      a.href = '/assets/MRC_template.xlsx';
+      a.download = 'MRC_template.xlsx';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      // 이메일 전송 자동화는 Zapier/HubSpot 연동으로 대체 가능
+      setTimeout(()=>{ window.location.href = '/mrc'; }, 600);
+    });
+  </script>
+</body>
+</html>
