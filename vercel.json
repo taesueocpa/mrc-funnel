@@ -4,6 +4,10 @@
     { "src": "^/$", "dest": "/index.html" },
     { "src": "^/mrc$", "dest": "/mrc.html" },
     { "src": "^/quote$", "dest": "/quote.html" },
+
+    // ✅ /blog 루트
+    { "src": "^/blog$", "dest": "https://notion-powered-blog-sandy.vercel.app" },
+    // ✅ /blog/anything
     { "src": "^/blog/(.*)", "dest": "https://notion-powered-blog-sandy.vercel.app/$1" }
   ]
 }
