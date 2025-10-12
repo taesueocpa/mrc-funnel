@@ -6,7 +6,8 @@
     { "src": "^/download$", "dest": "/index.html" },
     { "src": "^/mrc$", "dest": "/mrc.html" },
     { "src": "^/quote$", "dest": "/quote.html" }
-    { "src": "^/blog/(.*)", "dest": "https://notion-powered-blog-sandy.vercel.app/$1" }
+    { "src": "^/blog/(.*)", "dest": "https://notion-powered-blog-pviax80fe-taesu-eos-projects.vercel.app/$1" }
   ]
 }
+
 
