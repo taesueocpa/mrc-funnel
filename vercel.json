@@ -1,12 +1,10 @@
 {
   "version": 2,
-  "public": true,
   "routes": [
     { "src": "^/$", "dest": "/index.html" },
-    { "src": "^/download$", "dest": "/index.html" },
     { "src": "^/mrc$", "dest": "/mrc.html" },
-    { "src": "^/quote$", "dest": "/quote.html" }
-    { "src": "^/blog/(.*)", "dest": "https://notion-powered-blog-sandy.vercel.app/$1/$1" }
+    { "src": "^/quote$", "dest": "/quote.html" },
+    { "src": "^/blog/(.*)", "dest": "https://notion-powered-blog-sandy.vercel.app/$1" }
   ]
 }
 
